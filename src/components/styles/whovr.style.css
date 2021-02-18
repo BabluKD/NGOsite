@@ -1,0 +1,14 @@
+.whovr-section {
+    padding: 50px;
+    background-color: #f7d672a6;
+}
+.whovr-text h1 {
+    font-size: 36px;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+}
+.custom-img {
+    width: 47vw;
+    object-fit: cover;
+}
