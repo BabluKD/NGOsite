@@ -12,3 +12,8 @@
     width: 47vw;
     object-fit: cover;
 }
+@media (max-width: 768px) {
+    .whovr-section {
+        padding: 15px;
+    }
+}
