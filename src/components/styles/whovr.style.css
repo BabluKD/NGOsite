@@ -1,5 +1,5 @@
 .whovr-section {
-    padding: 50px;
+    padding: 25px 15px;
     background-color: #f7d672a6;
 }
 .whovr-text h1 {
@@ -8,12 +8,17 @@
     width: 100%;
     text-align: center;
 }
-.custom-img {
-    width: 47vw;
+.rt-img {
+    height: 60vh;
     object-fit: cover;
+    margin-top: 15px;
 }
 @media (max-width: 768px) {
     .whovr-section {
         padding: 15px;
+    }
+    .custom-img {
+        height: 40vh;
+        object-fit: cover;
     }
 }

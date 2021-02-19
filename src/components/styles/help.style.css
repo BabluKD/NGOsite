@@ -1,0 +1,46 @@
+.help-section {
+    margin: 25px 15px;
+}
+.help-text h2 {
+    font-size: 38px;
+    font-weight: 900;
+    text-align: center;
+}
+h4.card-title {
+    text-align: center;
+    font-weight: 700;
+}
+p.card-text {
+    text-align: justify;
+    padding: 10px;
+}
+.hand-svg {
+    width: 50%;
+    background-color: #ffc107;
+    margin-top: 0;    
+    transition: margin-top 0.5s ease 0.2s;
+    border-radius: 0 0 15px 15px;
+}
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+}
+.cardd {
+    border: none;
+     box-shadow: /*inset 5px 5px 5px rgba(255, 255, 255, 0.1),
+                inset -5px -5px 15px rgba(0, 0, 0, 0.2), */
+                5px 5px 5px rgba(255, 255, 255, 0.1),
+                -5px -5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin-top: 40px;
+    transform: translateY(0);
+    transition: transform 0.5s ease 0.2s;
+}
+.cardd:hover {
+    cursor: pointer;
+    transform: translateY(-15px);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
+}
+.cardd:hover .hand-svg {
+    margin-top: -15px;
+}

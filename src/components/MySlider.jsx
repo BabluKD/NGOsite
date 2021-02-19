@@ -13,42 +13,62 @@ import './styles/myslider.style.css'
 const MySlider = () => {
     return (
         <div className="slide-section">
-            <Row>
-                <Col md={6} xs={12} className="left-text my-auto">
-                    <h1>ATTRACTIVE <span style={{color: '#ffc107'}}>DUMMY SECOND</span> TITLE</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Harum est perspiciatis rerum quasi, molestias asperiores 
-                        maiores inventore aliquid. Corporis possimus officiis, 
-                        vero expedita earum sit laborum sed soluta adipisci unde.
-                    </p>
-                </Col>
-                <Col md={6} xs={12} >
-                    <Carousel controls={true} indicators={false} interval={1500} pause="false" >
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100 custom-img"
-                                src={slide1}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100 custom-img"
-                                src={slide2}
-                                alt="Second slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100 custom-img"
-                                src={slide3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
-                    </Carousel>
-                </Col>
-            </Row>
+            <Carousel controls={true} indicators={false} interval={2500} pause="false" >
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 custom-img"
+                        src={slide1}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <Row>
+                            <Col md={6} xs={12} className="left-text my-auto">
+                                <h2>ATTRACTIVE <span style={{ color: '#ffc107' }}>DUMMY </span> TITLE</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Harum est perspiciatis rerum quasi, molestias asperiores.
+                                </p>
+                            </Col>
+                        </Row>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 custom-img"
+                            src={slide2}
+                            alt="Second slide"
+                        />
+                        <Carousel.Caption>
+                            <Row>
+                                <Col md={6} xs={12} className="left-text my-auto">
+                                    <h2>ATTRACTIVE <span style={{ color: '#ffc107' }}>DUMMY </span> TITLE</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Harum est perspiciatis rerum quasi, molestias asperiores.
+                                    </p>
+                                </Col>
+                            </Row>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 custom-img"
+                            src={slide3}
+                            alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                            <Row>
+                                <Col md={6} xs={12} className="left-text my-auto">
+                                    <h2>ATTRACTIVE <span style={{ color: '#ffc107' }}>DUMMY </span> TITLE</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Harum est perspiciatis rerum quasi, molestias asperiores.
+                                    </p>
+                                </Col>
+                            </Row>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+            </Carousel>
         </div>
     )
 }

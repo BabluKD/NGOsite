@@ -1,0 +1,24 @@
+.choose-section {
+    background-color: #f7d672a6;
+    padding: 25px 50px;
+}
+.hand-svg2 {
+    width: 80%;
+    background-color: transparent;
+    padding: 10px;
+    border: 1px solid #000;
+    transition: background-color 0.4s ease-out;
+}
+.choose-section .row {
+    margin-bottom: 15px;
+}
+.about h3 {
+    font-weight: bold;
+}
+.hand-svg2:hover {
+    background-color: #ffc107;
+    border: none;
+}
+.about:hover .hand-svg2 {
+    background-color: #ffc107;
+}
