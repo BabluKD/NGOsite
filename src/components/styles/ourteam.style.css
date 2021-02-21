@@ -1,56 +1,65 @@
-.help-section {
+.team-section {
     margin: 25px;
-}
-.help-text h2 {
-    font-size: 38px;
-    font-weight: 900;
-    text-align: center;
-}
-.help-text p {
-    text-align: center;
 }
 h4.card-title {
     text-align: center;
     font-weight: 700;
 }
+h5.card-subtitle {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
 p.card-text {
     text-align: justify;
     padding: 10px;
 }
-.hand-svg {
-    width: 50%;
-    background-color: #ffc107;
-    margin-top: 0;    
+.team-svg {
+    width: 100px;
+    height: 100px;
+    margin-top: -80px;
     transition: margin-top 0.5s ease 0.2s;
-    border-radius: 0 0 15px 15px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    /* border-radius: 0 0 15px 15px; */
 }
 .card-deck {
     display: flex;
     flex-wrap: wrap;
 }
-.cardd {
+.team-card {
     border: none;
      box-shadow: /*inset 5px 5px 5px rgba(255, 255, 255, 0.1),
                 inset -5px -5px 15px rgba(0, 0, 0, 0.2), */
                 5px 5px 5px rgba(255, 255, 255, 0.1),
                 -5px -5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    margin-top: 40px;
+    margin-top: 120px;
+    max-width: 100px;
     transform: translateY(0);
     transition: transform 0.5s ease 0.2s;
 }
-.cardd:hover {
+.team-card:hover {
     cursor: pointer;
-    transform: translateY(-15px);
+    background-color: #ffc107;
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
 }
-.cardd:hover .hand-svg {
-    margin-top: -15px;
+.team-card:hover .card-body .btn {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
 }
 
 @media(min-width: 768px) {
-    .help-section {
+    .team-section {
         margin-left: 100px;
         margin-right: 100px;
+    }
+    .team-card {
+        max-width: 400px;
+    }
+    .team-svg {
+        width: 200px;
+        height: 200px;
     }
 }

@@ -11,7 +11,6 @@ import './styles/help.style.css';
 const BannerHelp = () => {
     return (
         <div className="help-section">
-            <Container>
                 <div className="help-text">
                     <h2>THE POOR NEEDS <span style={{ color: '#ffc107' }}> YOUR HELP</span></h2>
                     <p>
@@ -62,7 +61,6 @@ const BannerHelp = () => {
                         </Card.Footer> */}
                     </Card>
                 </CardDeck>
-            </Container>
         </div>
     )
 }

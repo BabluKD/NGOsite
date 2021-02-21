@@ -12,6 +12,13 @@ import './styles/choose.style.css';
 const ChooseUs = () => {
     return (
         <div className="choose-section">
+            <div className="help-text">
+                <h2>WHY CHOOSE <span style={{ color: '#ffc107' }}> US ?</span></h2>
+                <p>
+                    That conviction is where the process of change really begins—with the realization that just because a certain abuse has taken place in the past doesn’t mean that we have to tole.
+                    That conviction is where the process of change really begins
+                </p>
+            </div>
             <Row>
                 <Col md={6} xs={12}>
                     <Row className="row1">
