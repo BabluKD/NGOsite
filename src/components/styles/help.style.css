@@ -28,6 +28,10 @@ p.card-text {
     display: flex;
     flex-wrap: wrap;
 }
+.cardd .card-body {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .cardd {
     border: none;
      box-shadow: /*inset 5px 5px 5px rgba(255, 255, 255, 0.1),
@@ -35,6 +39,7 @@ p.card-text {
                 5px 5px 5px rgba(255, 255, 255, 0.1),
                 -5px -5px 15px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
+    max-width: 175px;
     margin-top: 40px;
     transform: translateY(0);
     transition: transform 0.5s ease 0.2s;
@@ -52,5 +57,12 @@ p.card-text {
     .help-section {
         margin-left: 100px;
         margin-right: 100px;
+    }
+    .cardd {
+        max-width: 380px;
+    }
+    .cardd .card-body {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

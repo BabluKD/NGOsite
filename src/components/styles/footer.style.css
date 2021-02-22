@@ -1,0 +1,31 @@
+.footer-section {
+    color: #fff;
+    background-color: #181501;
+    margin-top: 50px;
+}
+.footer-section .container-fluid {
+    padding-top: 30px;
+}
+.footer-copyright {
+    background-color: #000;
+    color: #fff;
+}
+.footer-logo {
+    width: 200px;
+}
+.footer-svg {
+    width: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+@media (max-width: 768px) {
+    .mail {
+        margin-left: -30px;
+    }  
+    .phone {
+        margin-left: -10px;
+    }     
+}

@@ -5,6 +5,7 @@ import BannerHelp from '../components/BannerHelp';
 import ChooseUs from '../components/ChooseUs';
 import OurCauses from '../components/OurCauses';
 import OurTeam from '../components/OurTeam';
+import Footer from '../components/Footer';
 
 const Home  = () => {
     return (
@@ -15,6 +16,7 @@ const Home  = () => {
             <OurCauses />
             <ChooseUs />
             <OurTeam />
+            <Footer />
         </>
     )
 }

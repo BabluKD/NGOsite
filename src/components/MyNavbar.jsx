@@ -21,13 +21,13 @@ const MyNavbar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <NavLink exact activeClassName="active-nav" className="nav-link" to="/">Home</NavLink>
-                        {/* <NavLink exact activeClassName="active-nav" className="nav-link" to="/about">About Us</NavLink> */}
-                        <NavDropdown title="About Us" id="basic-nav-dropdown" >
+                        <NavLink exact activeClassName="active-nav" className="nav-link" to="/about">About Us</NavLink>
+                        {/* <NavDropdown title="About Us" id="basic-nav-dropdown" >
                             <NavDropdown.Item className="bg-warning" href="/mission">Our Mission n Our Vision</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/campaigns">Our Campaigns</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/plans">Our Plans</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/volunteers">Our Volunteers</NavDropdown.Item>
-                        </NavDropdown>
+                        </NavDropdown> */}
                         <NavLink exact activeClassName="active-nav" className="nav-link" to="/partners">Our Partners</NavLink>
                         <NavLink exact activeClassName="active-nav" className="nav-link" to="/transparency">Flow of Transparency</NavLink>
                         <NavLink exact activeClassName="active-nav" className="nav-link" to="/contact">Contact Us</NavLink>

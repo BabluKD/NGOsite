@@ -13,12 +13,19 @@ const OurTeam = () => {
     var settings = {
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 1500,
         slidesToShow: 3,
         slidesToScroll: 2,
         autoplay: true,
-        centerMode: true,
-        pauseOnHover: true
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
     };
     return (
         <div className="team-section">
