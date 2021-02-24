@@ -6,6 +6,7 @@ import ChooseUs from '../components/ChooseUs';
 import OurCauses from '../components/OurCauses';
 import OurTeam from '../components/OurTeam';
 import Footer from '../components/Footer';
+import NewsLetter from '../components/NewsLetter';
 
 const Home  = () => {
     return (
@@ -16,6 +17,9 @@ const Home  = () => {
             <OurCauses />
             <ChooseUs />
             <OurTeam />
+            <br />
+            <br />
+            <NewsLetter />
             <Footer />
         </>
     )

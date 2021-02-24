@@ -19,9 +19,9 @@ const WhoVR = () => {
                         maiores inventore aliquid. Corporis possimus officiis,
                         vero expedita earum sit laborum sed soluta adipisci unde.
                     </p>
-                    <Button className="btn btn-outline-warning text-nowrap btn-lg">
+                    <a className="btn btn-warning text-nowrap btn-lg" exact href="/donate">
                         <strong>DONATE WITH US</strong>
-                    </Button>
+                    </a>
                 </Col>
                 <Col md={6} xs={12} >
                     <img

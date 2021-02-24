@@ -1,0 +1,40 @@
+.checkout-page {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.checkout-form .formData {
+    box-shadow: 0 3px 13px 0 grey;
+    border-radius: 20px;
+    padding: 50px;
+    padding-top: 10px;
+}
+
+.checkout-form .mx-auto h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+}
+
+.form-control:focus+.form-control-placeholder, .form-control:valid+.form-control-placeholder {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+}
+
+.checkout-btn {
+    border-radius: 30px;
+}

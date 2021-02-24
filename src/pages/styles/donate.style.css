@@ -1,0 +1,53 @@
+.donate-page {
+    width: 95vw;
+}
+.donate-left h1{
+    font-size: 38px;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.donate-card {
+    margin-top: 30px;
+    background-color:rgba(0,0,0,0.1);
+    border-radius: 15px;
+    border: none;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1),
+                -5px -5px 5px rgba(0, 0, 0, 0.2);
+}
+.donate-card .card-footer {
+    background-color: #ffc107;
+    border-radius: 0 0 15px 15px;
+    min-height: 70px;
+}
+.counter {
+    display: inline-flex;
+    flex-direction: row;
+}
+.rate {
+    font-size: 18px;
+}
+.counter input {
+    min-width: 30px;
+    width: 100%;
+    border: 1.5px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+}
+.counter button {
+    color: #000;
+    background-color: #fff;
+}
+.counter input:focus {
+    outline: none;;
+}
+.counter button:first-child {
+    border-radius: 5px 0 0 5px;
+}
+.counter button:last-child {
+    border-radius: 0 5px 5px 0;
+}
+.donate-btn {
+    border-radius: 30px;
+}

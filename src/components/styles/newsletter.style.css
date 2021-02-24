@@ -1,0 +1,30 @@
+.newsletter-section {
+    background-color: #ffc107;
+    min-height: 120px;
+    position: relative;
+    margin-bottom: -100px;
+    width: 90%;
+    border-radius: 5px;
+}
+.newsletter-section .input-group {
+    position: relative;
+    padding: 40px;
+}
+.newsletter-section .input-group input {
+    height: 50px;
+}
+.news-left {
+    padding-left: 40px;
+}
+.news-left h3{
+    padding-top: 10px;
+    font-weight: 600;
+}
+.news-left h4{
+    font-weight: 600;
+}
+.news-logo {
+    height: 50px;
+    transform: rotate(90deg);
+    opacity: 0.4;
+}

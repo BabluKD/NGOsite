@@ -13,6 +13,7 @@ import Partners from './pages/Partners';
 import Transparency from './pages/Transparency';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
+import Checkout from './pages/Checkout';
 // import Login from './pages/LogReg/Login';
 
 //components
@@ -35,6 +36,7 @@ const App = () => {
         <Route exact path="/transparency" component={Transparency} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/donate" component={Donate} />
+        <Route exact path="/checkout" component={Checkout} />
         {/* <Route exact path="/login" component={Login} /> */}
         <Redirect to="/" />
       </Switch>
