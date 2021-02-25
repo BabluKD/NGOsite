@@ -6,9 +6,9 @@ import Col from 'react-bootstrap/Col';
 import './styles/footer.style.css';
 
 import logo from '../images/logo-name(Golden).png';
-import location from '../images/icons/map-marker.svg';
-import mail from '../images/icons/envelope-solid.svg';
-import phone from '../images/icons/phone-solid.svg';
+import location from '../images/icons/map-marker.png';
+import mail from '../images/icons/envelope-solid.png';
+import phone from '../images/icons/phone-solid.png';
 
 
 const Footer = () => {

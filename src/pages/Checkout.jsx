@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Button from 'react-bootstrap/Button';
+import Table from 'react-bootstrap/Table';
 import { Link } from 'react-router-dom';
 
 import Footer from '../components/Footer'
@@ -14,35 +15,72 @@ export class Checkout extends Component {
 
         this.state = {
             fieldActivate: false,
-            items: ""
+            item1: "",
+            item2: "",
+            item3: "",
+            item4: "",
+            fname: "",
+            namePrint: "",
+            email: "",
+            whatsappNumber: "",
+            socialAccount: "",
+            userName: "",
+            socialAccount: "Facebook",
         }
     }
 
-    disableFocus(e) {
-        if (e.target.value === "") {
-            this.setState({
-                fieldActivate: false
-            })
-        }
-    }
-
-    updateInputValue(e) {
-        this.setState({
-            inputValue: e.target.value,
-        });
-        this.activateField(e);
-        e.preventDefault();
-    }
-
+    
     componentWillMount() {
         var history = window.location.search;
         const urlParams = new URLSearchParams(history);
-        const num = urlParams.get('items');
+        const num1 = urlParams.get('item1');
+        const num2 = urlParams.get('item2');
+        const num3 = urlParams.get('item3');
+        const num4 = urlParams.get('item4');
         this.setState({
-            items: num
+            item1: num1,
+            item2: num2,
+            item3: num3,
+            item4: num4
         });
     }
-    
+
+    handleChangeFname(e) {
+        this.setState({
+            fname: e.target.value
+        })
+    }
+    handleChangeNamePrint(e) {
+        this.setState({
+            namePrint: e.target.value
+        })
+    }
+    handleChangeEMail(e) {
+        this.setState({
+            email: e.target.value
+        })
+    }
+    handleChangeWNumber(e) {
+        this.setState({
+            whatsappNumber: e.target.value
+        })
+    }
+    handleChangeUserName(e) {
+        this.setState({
+            userName: e.target.value
+        })
+    }
+    handleChangeSocialAccount(e) {
+        this.setState({
+            socialAccount: e.target.value
+        })
+    }
+
+    handleFormSubmit(e) {
+        alert('Your name is: ' + this.state.fname);
+        e.preventDefault();
+      }
+
 
     // ValidationMessage = ({ valid, visited, validationMessage }) => {
     //     return (
@@ -70,15 +108,15 @@ export class Checkout extends Component {
                             <div className="col-md-6 mx-auto formData">
                                 <h2 className="text-center">Thank you for your support !</h2>
                                 <div className="form-group">
-                                    <Form.Control type="text" id="name" className="form-control" required />
-                                    <label className="form-control-placeholder" for="name">Full Name</label>
+                                    <Form.Control type="text" id="fname" className="form-control" value={this.state.fname} onChange={this.handleChangeFname.bind(this)} required />
+                                    <label className="form-control-placeholder" for="fname">Full Name</label>
                                 </div>
                                 <div className="form-group">
-                                    <Form.Control type="text" id="namePrint" className="form-control" required />
+                                    <Form.Control type="text" id="namePrint" className="form-control" value={this.state.namePrint} onChange={this.handleChangeNamePrint.bind(this)} required />
                                     <label className="form-control-placeholder" for="namePrint">Name to be printed (optional)</label>
                                 </div>
                                 <div className="form-group">
-                                    <Form.Control type="email" id="email" className="form-control" required />
+                                    <Form.Control type="email" id="email" className="form-control" value={this.state.email} onChange={this.handleChangeEMail.bind(this)} required />
                                     <label className="form-control-placeholder" for="email">E-Mail</label>
                                 </div>
                                 <div className="form-group">
@@ -86,7 +124,7 @@ export class Checkout extends Component {
                                         <InputGroup.Prepend>
                                             <InputGroup.Text>+91-</InputGroup.Text>
                                         </InputGroup.Prepend>
-                                        <Form.Control type="text" id="whatsappNumber" className="form-control" value={window.location.href} required />
+                                        <Form.Control type="text" id="whatsappNumber" className="form-control" value={this.state.whatsappNumber} onChange={this.handleChangeWNumber.bind(this)} required />
                                         <label className="form-control-placeholder" for="whatsappNumber">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             Whatsapp Number
@@ -96,14 +134,13 @@ export class Checkout extends Component {
                                 <Form.Row>
                                     <div className="col-md-6">
                                         <div className="form-group">
-                                            <Form.Control as="select" defaultValue="Choose..." required >
-                                                <option>Choose...</option>
+                                            <Form.Control as="select" value={this.state.value} onChange={this.handleChangeSocialAccount.bind(this)} required >
                                                 <option value="Facebook">Facebook</option>
                                                 <option value="instagram">Instagram</option>
                                                 <option value="twitter">Twitter</option>
                                                 <option value="linkedin">LinkedIn</option>
                                             </Form.Control>
-                                            <label className="form-control-placeholder" for="social">Social-Account</label>
+                                            <label className="form-control-placeholder" for="socialAccount">Social-Account</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
@@ -112,8 +149,8 @@ export class Checkout extends Component {
                                                 <InputGroup.Prepend>
                                                     <InputGroup.Text>@</InputGroup.Text>
                                                 </InputGroup.Prepend>
-                                                <Form.Control type="text" id="username" class="form-control" required />
-                                                <label className="form-control-placeholder" for="username">
+                                                <Form.Control type="text" id="userName" class="form-control" value={this.state.userName} onChange={this.handleChangeUserName.bind(this)} required />
+                                                <label className="form-control-placeholder" for="userName">
                                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                     username
                                                 </label>
@@ -122,16 +159,57 @@ export class Checkout extends Component {
                                     </div>
                                 </Form.Row>
                                 <Form.Row>
-                                    <div className="form-group col-md-4 mx-auto">
-                                        <Form.Control type="text" id="items" className="form-control" value={this.state.items} required />
-                                        <label className="form-control-placeholder" for="items">Items</label>
+                                    <div className="form-group col-md-10 mx-auto">
+                                        <Table variant="warning" striped bordered hover responsive size="sm">
+                                            <thead>
+                                                <tr className="text-center bg-warning">
+                                                    <th>Type</th>
+                                                    <th>Rate</th>
+                                                    <th>Qty</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Sashwat Aahar</td>
+                                                    <td className="text-right">₹45</td>
+                                                    <td className="text-center">{this.state.item1}</td>
+                                                    <td className="text-right">{"₹"+this.state.item1*45}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Vastradaan</td>
+                                                    <td className="text-right">₹101</td>
+                                                    <td className="text-center">{this.state.item2}</td>
+                                                    <td className="text-right">{"₹"+this.state.item2*101}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ocassional Daan</td>
+                                                    <td className="text-right">₹115</td>
+                                                    <td className="text-center">{this.state.item3}</td>
+                                                    <td className="text-right">{"₹"+this.state.item3*115}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gau Sewa</td>
+                                                    <td className="text-right">₹50</td>
+                                                    <td className="text-center">{this.state.item4}</td>
+                                                    <td className="text-right">{"₹"+this.state.item4*50}</td>
+                                                </tr>
+                                            </tbody>
+                                        </Table>
+
+                                        {/* <Form.Control type="text" id="items" className="form-control"
+                                            value={
+                                                this.state.item1 + "," + this.state.item2 + "," + this.state.item3 + "," + this.state.item4
+                                            }
+                                            required />
+                                        <label className="form-control-placeholder" for="items">Items</label> */}
                                     </div>
                                 </Form.Row>
                                 <br />
-                                <div className="mx-auto">
-                                    <Link to="/checkoutTemp">
-                                        <Button variant="warning" type="submit" className="btn mt-4 px-4 checkout-btn" onClick={this.sendCount}>
-                                            DONATE &nbsp; <span>₹{this.state.items*45}</span>
+                                <div className="checkout-btn">
+                                    <Link>
+                                        <Button variant="warning" type="submit" className="btn btn-lg px-4"  onClick={this.handleFormSubmit.bind(this)}>
+                                            DONATE &nbsp; <span>₹{this.state.item1*45+this.state.item2*101+this.state.item3*115+this.state.item4*50}</span>
                                         </Button>
                                     </Link>
                                 </div>

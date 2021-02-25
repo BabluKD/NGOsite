@@ -14,12 +14,19 @@
     width: 200px;
 }
 .footer-svg {
-    width: 30px;
+    height: 40px;
     padding: 5px;
-    border-radius: 50%;
-    border: 1px solid #000;
+    /* border-radius: 50%;
+    border: 1px solid #ffc107; */
     margin-top: 10px;
     margin-right: 5px;
+}
+.mail {
+    height: 30px;
+}
+.phone{
+    height: 35px;
+    transform: rotate(90deg);
 }
 @media (max-width: 768px) {
     .mail {

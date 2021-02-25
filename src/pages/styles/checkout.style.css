@@ -36,5 +36,15 @@
 }
 
 .checkout-btn {
+    margin-left: 30%;
+}
+
+.checkout-btn .btn {
     border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+    .checkout-btn {
+        margin-left: 20%;
+    }
 }
