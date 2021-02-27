@@ -23,7 +23,6 @@ export class Checkout extends Component {
             namePrint: "",
             email: "",
             whatsappNumber: "",
-            socialAccount: "",
             userName: "",
             socialAccount: "Facebook",
         }
@@ -77,7 +76,7 @@ export class Checkout extends Component {
     }
 
     handleFormSubmit(e) {
-        alert('Your name is: ' + this.state.fname);
+        alert('Error! \nSite under maintenance');
         e.preventDefault();
       }
 
@@ -160,49 +159,42 @@ export class Checkout extends Component {
                                 </Form.Row>
                                 <Form.Row>
                                     <div className="form-group col-md-10 mx-auto">
-                                        <Table variant="warning" striped bordered hover responsive size="sm">
+                                        <Table variant="warning" striped bordered hover responsive borderless size="sm">
                                             <thead>
                                                 <tr className="text-center bg-warning">
                                                     <th>Type</th>
                                                     <th>Rate</th>
                                                     <th>Qty</th>
-                                                    <th>Total</th>
+                                                    <th>Price</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
                                                     <td>Sashwat Aahar</td>
-                                                    <td className="text-right">₹45</td>
+                                                    <td className="text-center">&nbsp;&nbsp;₹45</td>
                                                     <td className="text-center">{this.state.item1}</td>
-                                                    <td className="text-right">{"₹"+this.state.item1*45}</td>
+                                                    <td className="text-center">&nbsp;&nbsp;{"₹"+this.state.item1*45}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Vastradaan</td>
-                                                    <td className="text-right">₹101</td>
+                                                    <td className="text-center">₹101</td>
                                                     <td className="text-center">{this.state.item2}</td>
-                                                    <td className="text-right">{"₹"+this.state.item2*101}</td>
+                                                    <td className="text-center">{"₹"+this.state.item2*101}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Ocassional Daan</td>
-                                                    <td className="text-right">₹115</td>
+                                                    <td className="text-center">₹115</td>
                                                     <td className="text-center">{this.state.item3}</td>
-                                                    <td className="text-right">{"₹"+this.state.item3*115}</td>
+                                                    <td className="text-center">{"₹"+this.state.item3*115}</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Gau Sewa</td>
-                                                    <td className="text-right">₹50</td>
+                                                    <td className="text-center">&nbsp;&nbsp;₹50</td>
                                                     <td className="text-center">{this.state.item4}</td>
-                                                    <td className="text-right">{"₹"+this.state.item4*50}</td>
+                                                    <td className="text-center">&nbsp;&nbsp;{"₹"+this.state.item4*50}</td>
                                                 </tr>
                                             </tbody>
                                         </Table>
-
-                                        {/* <Form.Control type="text" id="items" className="form-control"
-                                            value={
-                                                this.state.item1 + "," + this.state.item2 + "," + this.state.item3 + "," + this.state.item4
-                                            }
-                                            required />
-                                        <label className="form-control-placeholder" for="items">Items</label> */}
                                     </div>
                                 </Form.Row>
                                 <br />

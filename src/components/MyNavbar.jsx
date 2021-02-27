@@ -19,16 +19,16 @@ const MyNavbar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="mr-auto">
                         <NavLink exact activeClassName="active-nav" className="nav-link" to="/">Home</NavLink>
-                        <NavLink exact activeClassName="active-nav" className="nav-link" to="/about">About Us</NavLink>
+                        <NavLink exact activeClassName="active-nav" className="nav-link ml-2" to="/about">About Us</NavLink>
                         {/* <NavDropdown title="About Us" id="basic-nav-dropdown" >
                             <NavDropdown.Item className="bg-warning" href="/mission">Our Mission n Our Vision</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/campaigns">Our Campaigns</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/plans">Our Plans</NavDropdown.Item>
                             <NavDropdown.Item className="bg-warning" href="/volunteers">Our Volunteers</NavDropdown.Item>
                         </NavDropdown> */}
-                        <NavLink exact activeClassName="active-nav" className="nav-link" to="/partners">Our Partners</NavLink>
-                        <NavLink exact activeClassName="active-nav" className="nav-link" to="/transparency">Flow of Transparency</NavLink>
-                        <NavLink exact activeClassName="active-nav" className="nav-link" to="/contact">Contact Us</NavLink>
+                        <NavLink exact activeClassName="active-nav" className="nav-link ml-2" to="/partners">Our Partners</NavLink>
+                        <NavLink exact activeClassName="active-nav" className="nav-link ml-2" to="/transparency">Flow of Transparency</NavLink>
+                        <NavLink exact activeClassName="active-nav" className="nav-link ml-2" to="/contact">Contact Us</NavLink>
                     </Nav>
                     <Nav className="ml-auto mb-2 mb-sm-0">
                         <NavLink className="btn btn-outline-warning text-nowrap btn-block btn-lg" exact to="/donate">

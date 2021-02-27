@@ -1,0 +1,14 @@
+.json-to-table table {
+    font-size: 1.1em;
+  border: none;
+}
+.json-to-table table tbody tr:first-child {
+    font-weight: bold;
+  background-color: #ffc107;
+  border-bottom: 1px solid #ccc;
+}
+
+.whatsapp-svg {
+    width: 25px;
+    margin-left: 10px;
+}
