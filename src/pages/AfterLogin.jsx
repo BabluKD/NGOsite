@@ -13,18 +13,7 @@ const dummyData = [
     whatsappNumber: "8935806098",
     socialAccount: "Facebook",
     username: "bablu_kd",
-    Order: [
-      {
-        orderID: "1",
-        orderName: "Shashwat",
-        orderQty: "2",
-      },
-      {
-        orderID: "2",
-        orderName: "Shashwat",
-        orderQty: "2",
-      },
-    ],
+    Order: "1-2,2-5,3-0,4-0",
   },
   {
     id: "002",
@@ -57,23 +46,14 @@ const tableData = dummyData.map((item) => (
     <td>
       <span>
         {item.whatsappNumber}
-        <a
-          href={`https://wa.me/91${item.whatsappNumber}?text=Thank%20you%20for%20your%20order!We%20will%20get%20back%20to%20you%20soon.`}
-        >
+        <a href={`https://wa.me/91${item.whatsappNumber}?text=Thank%20you%20for%20your%20order!We%20will%20get%20back%20to%20you%20soon.`}>
           <img src={whatsapp} className="whatsapp-svg" alt="whatsapp" />
         </a>
       </span>
     </td>
     <td>{item.socialAccount}</td>
     <td>{item.username}</td>
-    <td>
-      {item.Order.forEach((orders) => (
-        <ul key={orders.orderID}>
-          <li>{orders.orderName}</li>
-          <li>{orders.orderQty}</li>
-        </ul>
-      ))}
-    </td>
+    <td>{item.Order}</td>
   </tr>
 ));
 
